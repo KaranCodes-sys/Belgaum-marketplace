@@ -1,0 +1,826 @@
+[
+  {
+    "id": "fruits-1",
+    "categoryId": "fruits",
+    "name": "Avocado",
+    "image": "https://picsum.photos/seed/quickbasket-1/300/300",
+    "price": 89,
+    "mrp": 109,
+    "weight": "1 pc",
+    "variants": [
+      "1 pc",
+      "1 pc"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked avocado delivered fresh to your door in minutes."
+  },
+  {
+    "id": "fruits-2",
+    "categoryId": "fruits",
+    "name": "Baby Spinach",
+    "image": "https://picsum.photos/seed/quickbasket-2/300/300",
+    "price": 49,
+    "mrp": 60,
+    "weight": "200 g",
+    "variants": [
+      "200 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked baby spinach delivered fresh to your door in minutes."
+  },
+  {
+    "id": "fruits-3",
+    "categoryId": "fruits",
+    "name": "Red Tomatoes",
+    "image": "https://picsum.photos/seed/quickbasket-3/300/300",
+    "price": 35,
+    "mrp": 45,
+    "weight": "500 g",
+    "variants": [
+      "500 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked red tomatoes delivered fresh to your door in minutes."
+  },
+  {
+    "id": "fruits-4",
+    "categoryId": "fruits",
+    "name": "Banana Robusta",
+    "image": "https://picsum.photos/seed/quickbasket-4/300/300",
+    "price": 48,
+    "mrp": 58,
+    "weight": "6 pcs",
+    "variants": [
+      "6 pcs",
+      "6 pcs"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked banana robusta delivered fresh to your door in minutes."
+  },
+  {
+    "id": "fruits-5",
+    "categoryId": "fruits",
+    "name": "Farm Fresh Carrots",
+    "image": "https://picsum.photos/seed/quickbasket-5/300/300",
+    "price": 42,
+    "mrp": 55,
+    "weight": "500 g",
+    "variants": [
+      "500 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked farm fresh carrots delivered fresh to your door in minutes."
+  },
+  {
+    "id": "fruits-6",
+    "categoryId": "fruits",
+    "name": "Coriander Bunch",
+    "image": "https://picsum.photos/seed/quickbasket-6/300/300",
+    "price": 18,
+    "mrp": 25,
+    "weight": "100 g",
+    "variants": [
+      "100 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked coriander bunch delivered fresh to your door in minutes."
+  },
+  {
+    "id": "dairy-1",
+    "categoryId": "dairy",
+    "name": "Farm Fresh Milk",
+    "image": "https://picsum.photos/seed/quickbasket-7/300/300",
+    "price": 32,
+    "mrp": 36,
+    "weight": "500 ml",
+    "variants": [
+      "500 ml",
+      "500 ml"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked farm fresh milk delivered fresh to your door in minutes."
+  },
+  {
+    "id": "dairy-2",
+    "categoryId": "dairy",
+    "name": "Greek Yogurt",
+    "image": "https://picsum.photos/seed/quickbasket-8/300/300",
+    "price": 75,
+    "mrp": 95,
+    "weight": "400 g",
+    "variants": [
+      "400 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked greek yogurt delivered fresh to your door in minutes."
+  },
+  {
+    "id": "dairy-3",
+    "categoryId": "dairy",
+    "name": "Salted Butter",
+    "image": "https://picsum.photos/seed/quickbasket-9/300/300",
+    "price": 59,
+    "mrp": 70,
+    "weight": "100 g",
+    "variants": [
+      "100 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked salted butter delivered fresh to your door in minutes."
+  },
+  {
+    "id": "dairy-4",
+    "categoryId": "dairy",
+    "name": "Paneer Cubes",
+    "image": "https://picsum.photos/seed/quickbasket-10/300/300",
+    "price": 82,
+    "mrp": 99,
+    "weight": "200 g",
+    "variants": [
+      "200 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked paneer cubes delivered fresh to your door in minutes."
+  },
+  {
+    "id": "dairy-5",
+    "categoryId": "dairy",
+    "name": "Brown Eggs",
+    "image": "https://picsum.photos/seed/quickbasket-11/300/300",
+    "price": 92,
+    "mrp": 110,
+    "weight": "6 pcs",
+    "variants": [
+      "6 pcs",
+      "6 pcs"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked brown eggs delivered fresh to your door in minutes."
+  },
+  {
+    "id": "dairy-6",
+    "categoryId": "dairy",
+    "name": "Muesli Crunch",
+    "image": "https://picsum.photos/seed/quickbasket-12/300/300",
+    "price": 139,
+    "mrp": 165,
+    "weight": "400 g",
+    "variants": [
+      "400 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked muesli crunch delivered fresh to your door in minutes."
+  },
+  {
+    "id": "snacks-1",
+    "categoryId": "snacks",
+    "name": "Sea Salt Chips",
+    "image": "https://picsum.photos/seed/quickbasket-13/300/300",
+    "price": 45,
+    "mrp": 55,
+    "weight": "100 g",
+    "variants": [
+      "100 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked sea salt chips delivered fresh to your door in minutes."
+  },
+  {
+    "id": "snacks-2",
+    "categoryId": "snacks",
+    "name": "Roasted Peanuts",
+    "image": "https://picsum.photos/seed/quickbasket-14/300/300",
+    "price": 52,
+    "mrp": 65,
+    "weight": "200 g",
+    "variants": [
+      "200 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked roasted peanuts delivered fresh to your door in minutes."
+  },
+  {
+    "id": "snacks-3",
+    "categoryId": "snacks",
+    "name": "Masala Nachos",
+    "image": "https://picsum.photos/seed/quickbasket-15/300/300",
+    "price": 69,
+    "mrp": 85,
+    "weight": "150 g",
+    "variants": [
+      "150 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked masala nachos delivered fresh to your door in minutes."
+  },
+  {
+    "id": "snacks-4",
+    "categoryId": "snacks",
+    "name": "Cheese Popcorn",
+    "image": "https://picsum.photos/seed/quickbasket-16/300/300",
+    "price": 58,
+    "mrp": 72,
+    "weight": "80 g",
+    "variants": [
+      "80 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked cheese popcorn delivered fresh to your door in minutes."
+  },
+  {
+    "id": "snacks-5",
+    "categoryId": "snacks",
+    "name": "Trail Mix",
+    "image": "https://picsum.photos/seed/quickbasket-17/300/300",
+    "price": 119,
+    "mrp": 145,
+    "weight": "180 g",
+    "variants": [
+      "180 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked trail mix delivered fresh to your door in minutes."
+  },
+  {
+    "id": "snacks-6",
+    "categoryId": "snacks",
+    "name": "Dark Chocolate Bites",
+    "image": "https://picsum.photos/seed/quickbasket-18/300/300",
+    "price": 99,
+    "mrp": 120,
+    "weight": "100 g",
+    "variants": [
+      "100 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked dark chocolate bites delivered fresh to your door in minutes."
+  },
+  {
+    "id": "beverages-1",
+    "categoryId": "beverages",
+    "name": "Cold Brew Coffee",
+    "image": "https://picsum.photos/seed/quickbasket-19/300/300",
+    "price": 95,
+    "mrp": 120,
+    "weight": "250 ml",
+    "variants": [
+      "250 ml",
+      "250 ml"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked cold brew coffee delivered fresh to your door in minutes."
+  },
+  {
+    "id": "beverages-2",
+    "categoryId": "beverages",
+    "name": "Sparkling Water",
+    "image": "https://picsum.photos/seed/quickbasket-20/300/300",
+    "price": 35,
+    "mrp": 45,
+    "weight": "750 ml",
+    "variants": [
+      "750 ml",
+      "750 ml"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked sparkling water delivered fresh to your door in minutes."
+  },
+  {
+    "id": "beverages-3",
+    "categoryId": "beverages",
+    "name": "Mango Juice",
+    "image": "https://picsum.photos/seed/quickbasket-21/300/300",
+    "price": 72,
+    "mrp": 89,
+    "weight": "1 L",
+    "variants": [
+      "1 L",
+      "1 L"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked mango juice delivered fresh to your door in minutes."
+  },
+  {
+    "id": "beverages-4",
+    "categoryId": "beverages",
+    "name": "Green Tea",
+    "image": "https://picsum.photos/seed/quickbasket-22/300/300",
+    "price": 110,
+    "mrp": 140,
+    "weight": "25 bags",
+    "variants": [
+      "25 bags",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked green tea delivered fresh to your door in minutes."
+  },
+  {
+    "id": "beverages-5",
+    "categoryId": "beverages",
+    "name": "Lemon Soda",
+    "image": "https://picsum.photos/seed/quickbasket-23/300/300",
+    "price": 42,
+    "mrp": 50,
+    "weight": "300 ml",
+    "variants": [
+      "300 ml",
+      "300 ml"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked lemon soda delivered fresh to your door in minutes."
+  },
+  {
+    "id": "beverages-6",
+    "categoryId": "beverages",
+    "name": "Coconut Water",
+    "image": "https://picsum.photos/seed/quickbasket-24/300/300",
+    "price": 55,
+    "mrp": 65,
+    "weight": "200 ml",
+    "variants": [
+      "200 ml",
+      "200 ml"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked coconut water delivered fresh to your door in minutes."
+  },
+  {
+    "id": "bakery-1",
+    "categoryId": "bakery",
+    "name": "Sourdough Loaf",
+    "image": "https://picsum.photos/seed/quickbasket-25/300/300",
+    "price": 89,
+    "mrp": 105,
+    "weight": "400 g",
+    "variants": [
+      "400 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked sourdough loaf delivered fresh to your door in minutes."
+  },
+  {
+    "id": "bakery-2",
+    "categoryId": "bakery",
+    "name": "Butter Croissant",
+    "image": "https://picsum.photos/seed/quickbasket-26/300/300",
+    "price": 55,
+    "mrp": 65,
+    "weight": "2 pcs",
+    "variants": [
+      "2 pcs",
+      "2 pcs"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked butter croissant delivered fresh to your door in minutes."
+  },
+  {
+    "id": "bakery-3",
+    "categoryId": "bakery",
+    "name": "Whole Wheat Bread",
+    "image": "https://picsum.photos/seed/quickbasket-27/300/300",
+    "price": 48,
+    "mrp": 58,
+    "weight": "400 g",
+    "variants": [
+      "400 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked whole wheat bread delivered fresh to your door in minutes."
+  },
+  {
+    "id": "bakery-4",
+    "categoryId": "bakery",
+    "name": "Chocolate Cookies",
+    "image": "https://picsum.photos/seed/quickbasket-28/300/300",
+    "price": 75,
+    "mrp": 90,
+    "weight": "150 g",
+    "variants": [
+      "150 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked chocolate cookies delivered fresh to your door in minutes."
+  },
+  {
+    "id": "bakery-5",
+    "categoryId": "bakery",
+    "name": "Oat Biscuits",
+    "image": "https://picsum.photos/seed/quickbasket-29/300/300",
+    "price": 64,
+    "mrp": 80,
+    "weight": "200 g",
+    "variants": [
+      "200 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked oat biscuits delivered fresh to your door in minutes."
+  },
+  {
+    "id": "bakery-6",
+    "categoryId": "bakery",
+    "name": "Burger Buns",
+    "image": "https://picsum.photos/seed/quickbasket-30/300/300",
+    "price": 42,
+    "mrp": 52,
+    "weight": "4 pcs",
+    "variants": [
+      "4 pcs",
+      "4 pcs"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked burger buns delivered fresh to your door in minutes."
+  },
+  {
+    "id": "personal-1",
+    "categoryId": "personal",
+    "name": "Aloe Face Wash",
+    "image": "https://picsum.photos/seed/quickbasket-31/300/300",
+    "price": 129,
+    "mrp": 160,
+    "weight": "100 ml",
+    "variants": [
+      "100 ml",
+      "100 ml"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked aloe face wash delivered fresh to your door in minutes."
+  },
+  {
+    "id": "personal-2",
+    "categoryId": "personal",
+    "name": "Mint Toothpaste",
+    "image": "https://picsum.photos/seed/quickbasket-32/300/300",
+    "price": 89,
+    "mrp": 110,
+    "weight": "150 g",
+    "variants": [
+      "150 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked mint toothpaste delivered fresh to your door in minutes."
+  },
+  {
+    "id": "personal-3",
+    "categoryId": "personal",
+    "name": "Daily Sunscreen",
+    "image": "https://picsum.photos/seed/quickbasket-33/300/300",
+    "price": 249,
+    "mrp": 299,
+    "weight": "50 g",
+    "variants": [
+      "50 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked daily sunscreen delivered fresh to your door in minutes."
+  },
+  {
+    "id": "personal-4",
+    "categoryId": "personal",
+    "name": "Body Lotion",
+    "image": "https://picsum.photos/seed/quickbasket-34/300/300",
+    "price": 179,
+    "mrp": 220,
+    "weight": "200 ml",
+    "variants": [
+      "200 ml",
+      "200 ml"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked body lotion delivered fresh to your door in minutes."
+  },
+  {
+    "id": "personal-5",
+    "categoryId": "personal",
+    "name": "Gentle Shampoo",
+    "image": "https://picsum.photos/seed/quickbasket-35/300/300",
+    "price": 159,
+    "mrp": 190,
+    "weight": "180 ml",
+    "variants": [
+      "180 ml",
+      "180 ml"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked gentle shampoo delivered fresh to your door in minutes."
+  },
+  {
+    "id": "personal-6",
+    "categoryId": "personal",
+    "name": "Lip Balm",
+    "image": "https://picsum.photos/seed/quickbasket-36/300/300",
+    "price": 75,
+    "mrp": 90,
+    "weight": "1 pc",
+    "variants": [
+      "1 pc",
+      "1 pc"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked lip balm delivered fresh to your door in minutes."
+  },
+  {
+    "id": "household-1",
+    "categoryId": "household",
+    "name": "Kitchen Towels",
+    "image": "https://picsum.photos/seed/quickbasket-37/300/300",
+    "price": 119,
+    "mrp": 145,
+    "weight": "4 rolls",
+    "variants": [
+      "4 rolls",
+      "4 rolls"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked kitchen towels delivered fresh to your door in minutes."
+  },
+  {
+    "id": "household-2",
+    "categoryId": "household",
+    "name": "Dishwash Liquid",
+    "image": "https://picsum.photos/seed/quickbasket-38/300/300",
+    "price": 99,
+    "mrp": 125,
+    "weight": "500 ml",
+    "variants": [
+      "500 ml",
+      "500 ml"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked dishwash liquid delivered fresh to your door in minutes."
+  },
+  {
+    "id": "household-3",
+    "categoryId": "household",
+    "name": "Laundry Pods",
+    "image": "https://picsum.photos/seed/quickbasket-39/300/300",
+    "price": 189,
+    "mrp": 230,
+    "weight": "12 pcs",
+    "variants": [
+      "12 pcs",
+      "12 pcs"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked laundry pods delivered fresh to your door in minutes."
+  },
+  {
+    "id": "household-4",
+    "categoryId": "household",
+    "name": "Garbage Bags",
+    "image": "https://picsum.photos/seed/quickbasket-40/300/300",
+    "price": 105,
+    "mrp": 130,
+    "weight": "30 pcs",
+    "variants": [
+      "30 pcs",
+      "30 pcs"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked garbage bags delivered fresh to your door in minutes."
+  },
+  {
+    "id": "household-5",
+    "categoryId": "household",
+    "name": "Surface Cleaner",
+    "image": "https://picsum.photos/seed/quickbasket-41/300/300",
+    "price": 135,
+    "mrp": 165,
+    "weight": "500 ml",
+    "variants": [
+      "500 ml",
+      "500 ml"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked surface cleaner delivered fresh to your door in minutes."
+  },
+  {
+    "id": "household-6",
+    "categoryId": "household",
+    "name": "Scrub Sponges",
+    "image": "https://picsum.photos/seed/quickbasket-42/300/300",
+    "price": 49,
+    "mrp": 65,
+    "weight": "3 pcs",
+    "variants": [
+      "3 pcs",
+      "3 pcs"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked scrub sponges delivered fresh to your door in minutes."
+  },
+  {
+    "id": "staples-1",
+    "categoryId": "staples",
+    "name": "Basmati Rice",
+    "image": "https://picsum.photos/seed/quickbasket-43/300/300",
+    "price": 145,
+    "mrp": 175,
+    "weight": "1 kg",
+    "variants": [
+      "1 kg",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller",
+      "deal"
+    ],
+    "description": "Handpicked basmati rice delivered fresh to your door in minutes."
+  },
+  {
+    "id": "staples-2",
+    "categoryId": "staples",
+    "name": "Whole Wheat Atta",
+    "image": "https://picsum.photos/seed/quickbasket-44/300/300",
+    "price": 72,
+    "mrp": 88,
+    "weight": "1 kg",
+    "variants": [
+      "1 kg",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "bestseller"
+    ],
+    "description": "Handpicked whole wheat atta delivered fresh to your door in minutes."
+  },
+  {
+    "id": "staples-3",
+    "categoryId": "staples",
+    "name": "Toor Dal",
+    "image": "https://picsum.photos/seed/quickbasket-45/300/300",
+    "price": 119,
+    "mrp": 145,
+    "weight": "500 g",
+    "variants": [
+      "500 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked toor dal delivered fresh to your door in minutes."
+  },
+  {
+    "id": "staples-4",
+    "categoryId": "staples",
+    "name": "Organic Oats",
+    "image": "https://picsum.photos/seed/quickbasket-46/300/300",
+    "price": 99,
+    "mrp": 120,
+    "weight": "500 g",
+    "variants": [
+      "500 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [
+      "deal"
+    ],
+    "description": "Handpicked organic oats delivered fresh to your door in minutes."
+  },
+  {
+    "id": "staples-5",
+    "categoryId": "staples",
+    "name": "Chana Dal",
+    "image": "https://picsum.photos/seed/quickbasket-47/300/300",
+    "price": 78,
+    "mrp": 95,
+    "weight": "500 g",
+    "variants": [
+      "500 g",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked chana dal delivered fresh to your door in minutes."
+  },
+  {
+    "id": "staples-6",
+    "categoryId": "staples",
+    "name": "Cane Sugar",
+    "image": "https://picsum.photos/seed/quickbasket-48/300/300",
+    "price": 55,
+    "mrp": 65,
+    "weight": "1 kg",
+    "variants": [
+      "1 kg",
+      "1 kg"
+    ],
+    "inStock": true,
+    "tags": [],
+    "description": "Handpicked cane sugar delivered fresh to your door in minutes."
+  }
+]
