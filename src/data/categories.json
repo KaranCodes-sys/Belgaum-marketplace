@@ -1,0 +1,3 @@
+[
+ {"id":"fruits","name":"Fruits & Veggies","emoji":"🥬","color":"#DDF4D4"},{"id":"dairy","name":"Dairy & Breakfast","emoji":"🥛","color":"#FFF0C9"},{"id":"snacks","name":"Munchies","emoji":"🍿","color":"#FFE0E8"},{"id":"beverages","name":"Beverages","emoji":"🥤","color":"#D9F1FF"},{"id":"bakery","name":"Bakery & Biscuits","emoji":"🥨","color":"#F3E4D0"},{"id":"personal","name":"Personal Care","emoji":"🧴","color":"#E8E2FF"},{"id":"household","name":"Household","emoji":"🧹","color":"#DDF1ED"},{"id":"staples","name":"Atta, Rice & Dal","emoji":"🌾","color":"#F9E9B8"}
+]
