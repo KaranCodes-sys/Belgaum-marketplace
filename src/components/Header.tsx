@@ -1,0 +1,3 @@
+import { MapPin, Search, ShoppingBag } from './icons'
+import { useCart } from '../context/CartContext'
+export function Header({query,setQuery,goHome,goCart}:{query:string;setQuery:(x:string)=>void;goHome:()=>void;goCart:()=>void}){const {count}=useCart();return <header className="header"><div className="topline"><button className="location" onClick={goHome}><span className="bolt">⚡</span><span><b>Delivery in 10 minutes</b><small><MapPin size={12}/> 18, Market Road, Belgaum</small></span></button><button className="bag" onClick={goCart}><ShoppingBag size={21}/>{count>0&&<i>{count}</i>}</button></div><label className="search"><Search size={19}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search for milk, fruits, snacks..."/></label></header>}
