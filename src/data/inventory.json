@@ -1,0 +1,60 @@
+[
+  { "inventoryId": "inv-gv-fruits-1",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-1",  "price": 89,  "mrp": 109, "inStock": true,  "weight": "1 pc"    },
+  { "inventoryId": "inv-gv-fruits-2",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-2",  "price": 49,  "mrp": 60,  "inStock": true,  "weight": "200 g"   },
+  { "inventoryId": "inv-gv-fruits-3",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-3",  "price": 149, "mrp": 180, "inStock": true,  "weight": "1 kg"    },
+  { "inventoryId": "inv-gv-fruits-4",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-4",  "price": 39,  "mrp": 50,  "inStock": true,  "weight": "6 pcs"   },
+  { "inventoryId": "inv-gv-fruits-5",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-5",  "price": 59,  "mrp": 79,  "inStock": true,  "weight": "250 g"   },
+  { "inventoryId": "inv-gv-fruits-6",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-6",  "price": 69,  "mrp": 89,  "inStock": true,  "weight": "1 head"  },
+  { "inventoryId": "inv-gv-fruits-7",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-7",  "price": 99,  "mrp": 120, "inStock": false, "weight": "1 kg"    },
+  { "inventoryId": "inv-gv-fruits-8",  "shopId": "shop-greenvalley",  "masterProductId": "fruits-8",  "price": 79,  "mrp": 99,  "inStock": true,  "weight": "1 kg"    },
+
+  { "inventoryId": "inv-sb-dairy-1",   "shopId": "shop-sbdairy",      "masterProductId": "dairy-1",   "price": 31,  "mrp": 34,  "inStock": true,  "weight": "500 ml"  },
+  { "inventoryId": "inv-sb-dairy-2",   "shopId": "shop-sbdairy",      "masterProductId": "dairy-2",   "price": 89,  "mrp": 110, "inStock": true,  "weight": "400 g"   },
+  { "inventoryId": "inv-sb-dairy-3",   "shopId": "shop-sbdairy",      "masterProductId": "dairy-3",   "price": 85,  "mrp": 105, "inStock": true,  "weight": "200 g"   },
+  { "inventoryId": "inv-sb-dairy-4",   "shopId": "shop-sbdairy",      "masterProductId": "dairy-4",   "price": 56,  "mrp": 62,  "inStock": true,  "weight": "100 g"   },
+  { "inventoryId": "inv-sb-dairy-5",   "shopId": "shop-sbdairy",      "masterProductId": "dairy-5",   "price": 79,  "mrp": 95,  "inStock": true,  "weight": "12 pcs"  },
+  { "inventoryId": "inv-sb-dairy-6",   "shopId": "shop-sbdairy",      "masterProductId": "dairy-6",   "price": 159, "mrp": 199, "inStock": true,  "weight": "200 g"   },
+
+  { "inventoryId": "inv-gv-dairy-1",   "shopId": "shop-greenvalley",  "masterProductId": "dairy-1",   "price": 32,  "mrp": 34,  "inStock": true,  "weight": "500 ml"  },
+  { "inventoryId": "inv-gv-dairy-5",   "shopId": "shop-greenvalley",  "masterProductId": "dairy-5",   "price": 80,  "mrp": 95,  "inStock": true,  "weight": "12 pcs"  },
+
+  { "inventoryId": "inv-mb-bakery-1",  "shopId": "shop-morningbakes", "masterProductId": "bakery-1",  "price": 129, "mrp": 160, "inStock": true,  "weight": "400 g"   },
+  { "inventoryId": "inv-mb-bakery-2",  "shopId": "shop-morningbakes", "masterProductId": "bakery-2",  "price": 89,  "mrp": 110, "inStock": true,  "weight": "4 pcs"   },
+  { "inventoryId": "inv-mb-bakery-3",  "shopId": "shop-morningbakes", "masterProductId": "bakery-3",  "price": 45,  "mrp": 55,  "inStock": true,  "weight": "400 g"   },
+  { "inventoryId": "inv-mb-bakery-4",  "shopId": "shop-morningbakes", "masterProductId": "bakery-4",  "price": 99,  "mrp": 129, "inStock": true,  "weight": "4 pcs"   },
+
+  { "inventoryId": "inv-kn-snacks-1",  "shopId": "shop-kiran",        "masterProductId": "snacks-1",  "price": 20,  "mrp": 20,  "inStock": true,  "weight": "50 g"    },
+  { "inventoryId": "inv-kn-snacks-2",  "shopId": "shop-kiran",        "masterProductId": "snacks-2",  "price": 99,  "mrp": 120, "inStock": true,  "weight": "90 g"    },
+  { "inventoryId": "inv-kn-snacks-3",  "shopId": "shop-kiran",        "masterProductId": "snacks-3",  "price": 49,  "mrp": 65,  "inStock": true,  "weight": "150 g"   },
+  { "inventoryId": "inv-kn-snacks-4",  "shopId": "shop-kiran",        "masterProductId": "snacks-4",  "price": 199, "mrp": 249, "inStock": true,  "weight": "200 g"   },
+  { "inventoryId": "inv-kn-snacks-5",  "shopId": "shop-kiran",        "masterProductId": "snacks-5",  "price": 249, "mrp": 299, "inStock": true,  "weight": "200 g"   },
+  { "inventoryId": "inv-kn-snacks-6",  "shopId": "shop-kiran",        "masterProductId": "snacks-6",  "price": 30,  "mrp": 35,  "inStock": true,  "weight": "120 g"   },
+
+  { "inventoryId": "inv-sm-snacks-1",  "shopId": "shop-starmart",     "masterProductId": "snacks-1",  "price": 22,  "mrp": 25,  "inStock": true,  "weight": "50 g"    },
+  { "inventoryId": "inv-sm-snacks-2",  "shopId": "shop-starmart",     "masterProductId": "snacks-2",  "price": 105, "mrp": 120, "inStock": true,  "weight": "90 g"    },
+  { "inventoryId": "inv-sm-snacks-6",  "shopId": "shop-starmart",     "masterProductId": "snacks-6",  "price": 32,  "mrp": 35,  "inStock": true,  "weight": "120 g"   },
+
+  { "inventoryId": "inv-kn-bev-1",     "shopId": "shop-kiran",        "masterProductId": "bev-1",     "price": 89,  "mrp": 110, "inStock": true,  "weight": "250 ml"  },
+  { "inventoryId": "inv-kn-bev-2",     "shopId": "shop-kiran",        "masterProductId": "bev-2",     "price": 69,  "mrp": 89,  "inStock": true,  "weight": "1 L"     },
+  { "inventoryId": "inv-kn-bev-3",     "shopId": "shop-kiran",        "masterProductId": "bev-3",     "price": 149, "mrp": 180, "inStock": true,  "weight": "25 bags" },
+  { "inventoryId": "inv-kn-bev-4",     "shopId": "shop-kiran",        "masterProductId": "bev-4",     "price": 45,  "mrp": 50,  "inStock": true,  "weight": "750 ml"  },
+  { "inventoryId": "inv-kn-bev-5",     "shopId": "shop-kiran",        "masterProductId": "bev-5",     "price": 59,  "mrp": 75,  "inStock": true,  "weight": "300 ml"  },
+  { "inventoryId": "inv-kn-bev-6",     "shopId": "shop-kiran",        "masterProductId": "bev-6",     "price": 49,  "mrp": 65,  "inStock": false, "weight": "200 ml"  },
+
+  { "inventoryId": "inv-sm-bev-1",     "shopId": "shop-starmart",     "masterProductId": "bev-1",     "price": 95,  "mrp": 110, "inStock": true,  "weight": "250 ml"  },
+  { "inventoryId": "inv-sm-bev-4",     "shopId": "shop-starmart",     "masterProductId": "bev-4",     "price": 47,  "mrp": 50,  "inStock": true,  "weight": "750 ml"  },
+  { "inventoryId": "inv-sm-bev-5",     "shopId": "shop-starmart",     "masterProductId": "bev-5",     "price": 62,  "mrp": 75,  "inStock": true,  "weight": "300 ml"  },
+  { "inventoryId": "inv-sm-bev-6",     "shopId": "shop-starmart",     "masterProductId": "bev-6",     "price": 50,  "mrp": 65,  "inStock": true,  "weight": "200 ml"  },
+
+  { "inventoryId": "inv-kn-pers-1",    "shopId": "shop-kiran",        "masterProductId": "personal-1","price": 179, "mrp": 220, "inStock": true,  "weight": "180 ml"  },
+  { "inventoryId": "inv-kn-pers-2",    "shopId": "shop-kiran",        "masterProductId": "personal-2","price": 199, "mrp": 249, "inStock": true,  "weight": "250 ml"  },
+  { "inventoryId": "inv-kn-pers-3",    "shopId": "shop-kiran",        "masterProductId": "personal-3","price": 99,  "mrp": 120, "inStock": true,  "weight": "250 ml"  },
+
+  { "inventoryId": "inv-kn-hh-1",      "shopId": "shop-kiran",        "masterProductId": "household-1","price": 89, "mrp": 110, "inStock": true,  "weight": "500 ml"  },
+  { "inventoryId": "inv-kn-hh-2",      "shopId": "shop-kiran",        "masterProductId": "household-2","price": 129,"mrp": 160, "inStock": true,  "weight": "1 L"     },
+
+  { "inventoryId": "inv-kn-stap-1",    "shopId": "shop-kiran",        "masterProductId": "staples-1", "price": 189, "mrp": 230, "inStock": true,  "weight": "1 kg"    },
+  { "inventoryId": "inv-kn-stap-2",    "shopId": "shop-kiran",        "masterProductId": "staples-2", "price": 249, "mrp": 299, "inStock": true,  "weight": "5 kg"    },
+  { "inventoryId": "inv-kn-stap-3",    "shopId": "shop-kiran",        "masterProductId": "staples-3", "price": 149, "mrp": 185, "inStock": true,  "weight": "500 g"   },
+  { "inventoryId": "inv-kn-stap-4",    "shopId": "shop-kiran",        "masterProductId": "staples-4", "price": 179, "mrp": 215, "inStock": true,  "weight": "1 L"     }
+]

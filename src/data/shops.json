@@ -1,0 +1,72 @@
+[
+  {
+    "id": "shop-kiran",
+    "name": "Kiran General Store",
+    "type": "general",
+    "tagline": "Your everyday essentials, delivered fast",
+    "address": "12, Market Road, Belagavi - 590001",
+    "lat": 15.851,
+    "lng": 74.499,
+    "rating": 4.3,
+    "isOpen": true,
+    "deliveryTimeMinutes": 20,
+    "minOrderAmount": 99,
+    "deliveryFee": 29
+  },
+  {
+    "id": "shop-greenvalley",
+    "name": "Green Valley Fresh",
+    "type": "fruits_veggies",
+    "tagline": "Farm-fresh fruits & vegetables daily",
+    "address": "7, Subhash Road, Belagavi - 590001",
+    "lat": 15.8497,
+    "lng": 74.4977,
+    "rating": 4.6,
+    "isOpen": true,
+    "deliveryTimeMinutes": 15,
+    "minOrderAmount": 79,
+    "deliveryFee": 19
+  },
+  {
+    "id": "shop-sbdairy",
+    "name": "SB Dairy Farm",
+    "type": "dairy",
+    "tagline": "Fresh dairy products every morning",
+    "address": "3, Dairy Colony, Belagavi - 590002",
+    "lat": 15.848,
+    "lng": 74.496,
+    "rating": 4.5,
+    "isOpen": true,
+    "deliveryTimeMinutes": 18,
+    "minOrderAmount": 49,
+    "deliveryFee": 15
+  },
+  {
+    "id": "shop-morningbakes",
+    "name": "Morning Fresh Bakery",
+    "type": "bakery",
+    "tagline": "Baked fresh every morning, just for you",
+    "address": "22, College Road, Belagavi - 590006",
+    "lat": 15.8525,
+    "lng": 74.501,
+    "rating": 4.7,
+    "isOpen": true,
+    "deliveryTimeMinutes": 25,
+    "minOrderAmount": 49,
+    "deliveryFee": 19
+  },
+  {
+    "id": "shop-starmart",
+    "name": "Star Mini Mart",
+    "type": "grocery",
+    "tagline": "Quick snacks and daily needs near you",
+    "address": "45, Club Road, Belagavi - 590001",
+    "lat": 15.8535,
+    "lng": 74.502,
+    "rating": 4.1,
+    "isOpen": true,
+    "deliveryTimeMinutes": 22,
+    "minOrderAmount": 79,
+    "deliveryFee": 25
+  }
+]
