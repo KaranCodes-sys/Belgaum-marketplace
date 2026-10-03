@@ -1144,3 +1144,88 @@ img { display: block; }
   .modal-wrap { align-items: center; }
   .cart-bar { bottom: 74px; }
 }
+
+/* ════════════════════════════════════════════════════
+   SEARCH — CLICKABLE SUGGESTION CHIPS
+   ════════════════════════════════════════════════════ */
+.chip-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, transform .12s;
+  color: var(--text-primary);
+}
+.chip-btn:hover {
+  background: #e8f3e8;
+  border-color: #c0d8c0;
+  transform: translateY(-1px);
+}
+.chip-btn:active { transform: scale(.96); }
+
+/* ════════════════════════════════════════════════════
+   PRODUCT MODAL — VARIANT LABELS (display-only)
+   ════════════════════════════════════════════════════ */
+.variants span {
+  border: 1.5px solid var(--border-mid);
+  padding: 7px 12px;
+  border-radius: var(--r-md);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: inline-block;
+}
+.variants span.chosen {
+  border-color: var(--green-brand);
+  background: var(--green-light);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Out of stock wide state (in modal) */
+.wide-oos {
+  display: block;
+  text-align: center;
+  padding: 13px;
+  margin-top: 14px;
+  background: #f9f1f0;
+  color: #9a4040;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ════════════════════════════════════════════════════
+   TRACKING — ORDER SUMMARY CARD
+   ════════════════════════════════════════════════════ */
+.order-id {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--text-faint) !important;
+  letter-spacing: 0.3px;
+  margin: 0 0 6px !important;
+  text-transform: uppercase;
+}
+.tracking-summary {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 14px 16px;
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+.tracking-summary p { margin: 4px 0; }
+.tracking-summary small { color: var(--text-faint); font-size: 11.5px; }
+
+/* ════════════════════════════════════════════════════
+   CHECKOUT — TOTAL ROW IN SUMMARY CARD
+   ════════════════════════════════════════════════════ */
+.checkout-card .total {
+  font-size: 15px;
+  font-weight: 800;
+}

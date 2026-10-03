@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { useUserLocation } from '../context/LocationContext'
+import type { Order } from '../types/order'
 
 const money = (v: number) => `₹${v.toLocaleString('en-IN')}`
 const DELIVERY_THRESHOLD = 399
@@ -9,14 +10,18 @@ const DELIVERY_FEE       = 29
 const HANDLING_FEE       = 4
 const PAYMENT_OPTIONS    = ['UPI', 'Credit / Debit card', 'Cash on delivery']
 
+function generateOrderId(): string {
+  return 'BM' + Date.now().toString(36).toUpperCase()
+}
+
 export default function CheckoutPage() {
   const navigate                    = useNavigate()
   const { lines, subtotal, clear }  = useCart()
   const { userLocation, openAddressPicker } = useUserLocation()
   const [payment, setPayment]       = useState('UPI')
 
-  const fee   = subtotal >= DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE
-  const total = subtotal + fee + HANDLING_FEE
+  const deliveryFee = subtotal >= DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE
+  const total       = subtotal + deliveryFee + HANDLING_FEE
   const { address } = userLocation
 
   if (!lines.length) {
@@ -27,12 +32,30 @@ export default function CheckoutPage() {
           <span>🛒</span>
           <h2>Your cart is empty</h2>
           <p>Add products before proceeding to checkout.</p>
+          <button className="shop-btn" onClick={() => navigate('/')}>Shop now</button>
         </div>
       </section>
     )
   }
 
   const placeOrder = () => {
+    const order: Order = {
+      id:            generateOrderId(),
+      lines:         [...lines],
+      address:       `${address.label} — ${address.line1}, ${address.city} ${address.pincode}`,
+      paymentMethod: payment,
+      subtotal,
+      deliveryFee,
+      handlingFee:   HANDLING_FEE,
+      total,
+      status:        'placed',
+      placedAt:      new Date().toISOString(),
+    }
+    try {
+      localStorage.setItem('belgaum_last_order', JSON.stringify(order))
+    } catch {
+      // storage unavailable — continue anyway
+    }
     clear()
     navigate('/tracking')
   }
@@ -75,7 +98,11 @@ export default function CheckoutPage() {
           </p>
         ))}
         <hr />
-        <p><b>Total</b><b>{money(total)}</b></p>
+        <p><span>Item total</span><b>{money(subtotal)}</b></p>
+        <p><span>Delivery fee</span><b>{deliveryFee ? money(deliveryFee) : 'FREE'}</b></p>
+        <p><span>Handling fee</span><b>₹{HANDLING_FEE}</b></p>
+        <hr />
+        <p className="total"><b>To pay</b><b>{money(total)}</b></p>
       </div>
 
       <button className="checkout-btn" onClick={placeOrder}>
@@ -84,3 +111,4 @@ export default function CheckoutPage() {
     </section>
   )
 }
+

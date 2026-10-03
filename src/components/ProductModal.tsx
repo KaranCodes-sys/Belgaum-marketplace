@@ -1,7 +1,7 @@
-﻿import { useState } from 'react'
 import { X, Minus, Plus } from './icons'
 import type { DisplayProduct } from '../types/catalog'
 import { useCart } from '../context/CartContext'
+import { useUI } from '../context/UIContext'
 import { ProductCard } from './ProductCard'
 import { getDisplayProducts } from '../services/catalog'
 
@@ -12,8 +12,8 @@ type Props = {
 }
 
 export function ProductModal({ product, close, notify }: Props) {
-  const [variant, setVariant] = useState(0)
   const { lines, add, setQuantity } = useCart()
+  const { openProduct } = useUI()
   const quantity = lines.find((l) => l.product.id === product.id)?.quantity ?? 0
 
   const related = getDisplayProducts()
@@ -22,9 +22,10 @@ export function ProductModal({ product, close, notify }: Props) {
 
   const addItem = () => { add(product); notify(product.name + ' added to cart') }
 
-  const variantPrice = variant ? product.price * 2 : product.price
-  const variantMrp   = variant ? product.mrp   * 2 : product.mrp
-  const discount     = Math.round((1 - product.price / product.mrp) * 100)
+  // Prices come directly from the catalog — never fabricated
+  const price    = product.price
+  const mrp      = product.mrp
+  const discount = Math.round((1 - price / mrp) * 100)
 
   return (
     <div className="modal-wrap" role="presentation" onMouseDown={close}>
@@ -56,42 +57,38 @@ export function ProductModal({ product, close, notify }: Props) {
           {/* Name */}
           <h2>{product.name}</h2>
 
-          {/* Unit */}
+          {/* Unit — default unit label, e.g. "1 kg", "500 ml" */}
           <p className="weight">{product.unit}</p>
 
-          {/* Price block */}
+          {/* Price block — real catalog price only */}
           <div className="modal-price-block">
-            <span className="modal-price">
-              {'\u20B9'}{variantPrice}
-            </span>
-            {variantMrp > variantPrice && (
-              <del className="modal-price-mrp">{'\u20B9'}{variantMrp}</del>
+            <span className="modal-price">{'\u20B9'}{price}</span>
+            {mrp > price && (
+              <del className="modal-price-mrp">{'\u20B9'}{mrp}</del>
             )}
             {discount >= 3 && (
               <span className="modal-discount-tag">{discount}% off</span>
             )}
           </div>
 
-          {/* Variant selector */}
+          {/* Variant labels (display-only — no fabricated pricing) */}
           {product.variants.length > 1 && (
             <>
-              <h4>Choose a size</h4>
+              <h4>Available sizes</h4>
               <div className="variants">
                 {product.variants.map((v, i) => (
-                  <button
-                    key={v}
-                    className={variant === i ? 'chosen' : ''}
-                    onClick={() => setVariant(i)}
-                  >
-                    {v}<b>{'\u20B9'}{i ? product.price * 2 : product.price}</b>
-                  </button>
+                  <span key={v} className={i === 0 ? 'chosen' : ''}>
+                    {v}
+                  </span>
                 ))}
               </div>
             </>
           )}
 
           {/* Add to cart / stepper */}
-          {quantity ? (
+          {!product.inStock ? (
+            <span className="sold-out wide-oos">Out of stock</span>
+          ) : quantity ? (
             <div className="modal-step">
               <button
                 onClick={() => setQuantity(product.id, quantity - 1)}
@@ -107,7 +104,7 @@ export function ProductModal({ product, close, notify }: Props) {
           ) : (
             <button className="wide-add" onClick={addItem}>
               Add to cart
-              <span>{'\u20B9'}{variantPrice}</span>
+              <span>{'\u20B9'}{price}</span>
             </button>
           )}
 
@@ -116,7 +113,7 @@ export function ProductModal({ product, close, notify }: Props) {
             <p className="desc">{product.description}</p>
           )}
 
-          {/* Related products */}
+          {/* Related products — clicking opens that product's detail */}
           {related.length > 0 && (
             <>
               <h3>You might also like</h3>
@@ -125,7 +122,7 @@ export function ProductModal({ product, close, notify }: Props) {
                   <ProductCard
                     key={item.id}
                     product={item}
-                    onOpen={() => {}}
+                    onOpen={openProduct}
                     onAdded={notify}
                   />
                 ))}
@@ -137,4 +134,4 @@ export function ProductModal({ product, close, notify }: Props) {
       </section>
     </div>
   )
-}
+}
