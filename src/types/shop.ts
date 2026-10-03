@@ -31,14 +31,15 @@ export type Shop = {
 
 // ── ShopInventory ───────────────────────────────────────────────────────────
 // The link between a Shop and a MasterProduct.
-// One MasterProduct can exist in multiple shops at different prices.
+// One MasterProduct can be stocked by multiple shops simultaneously.
+//
+// The shopkeeper sets their own selling price.
+// The customer-facing price is derived from this via pricing.ts.
 
 export type ShopInventory = {
-  inventoryId: string
-  shopId: string          // FK → Shop.id
-  masterProductId: string // FK → MasterProduct.id
-  price: number           // selling price at this shop
-  mrp: number             // maximum retail price at this shop
+  id: string
+  shopId: string    // FK → Shop.id
+  productId: string // FK → MasterProduct.id
+  price: number     // shopkeeper's selling price (INR) — fed into calculateCustomerPrice()
   inStock: boolean
-  weight: string          // can override MasterProduct.defaultWeight
 }

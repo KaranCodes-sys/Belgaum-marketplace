@@ -39,7 +39,7 @@ export default function CartPage() {
             <img src={product.image} alt={product.name} />
             <div>
               <b>{product.name}</b>
-              <small>{product.weight}</small>
+              <small>{product.unit}</small>
               <strong>{money(product.price * quantity)}</strong>
             </div>
             <div className="cart-actions">

@@ -13,9 +13,9 @@ export function Header() {
     <header className="header">
       <div className="topline">
         <button className="location" onClick={openAddressPicker} aria-label="Choose delivery address">
-          <span className="bolt">⚡</span>
+          <span className="bolt">🛍️</span>
           <span>
-            <b>Delivery in 10 minutes</b>
+            <b>Belgaum Marketplace</b>
             <small>
               <MapPin size={12} /> {address.line1}, {address.city} <ChevronRight size={13} />
             </small>

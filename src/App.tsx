@@ -4,7 +4,7 @@ import { CartBar } from './components/CartBar'
 import { Toast } from './components/Toast'
 import { ProductModal } from './components/ProductModal'
 import { AddressPicker } from './components/AddressPicker'
-import { Home, PackageCheck, SlidersHorizontal } from './components/icons'
+import { Home, PackageCheck, Grid } from './components/icons'
 import { UIProvider, useUI } from './context/UIContext'
 import HomePage      from './pages/HomePage'
 import CategoryPage  from './pages/CategoryPage'
@@ -12,6 +12,8 @@ import SearchPage    from './pages/SearchPage'
 import CartPage      from './pages/CartPage'
 import CheckoutPage  from './pages/CheckoutPage'
 import TrackingPage  from './pages/TrackingPage'
+import ShopsPage      from './pages/ShopsPage'
+import CategoriesPage from './pages/CategoriesPage'
 
 // ── Layout ────────────────────────────────────────────────────────────────
 // Wraps every route except Tracking. Renders Header, BottomNav,
@@ -41,11 +43,11 @@ function Layout() {
               <Home />Home
             </button>
             <button
-              id="nav-browse"
-              className={path === '/search' ? 'active' : ''}
-              onClick={() => navigate('/search')}
+              id="nav-categories"
+              className={path === '/categories' || path.startsWith('/category') ? 'active' : ''}
+              onClick={() => navigate('/categories')}
             >
-              <SlidersHorizontal />Browse
+              <Grid size={20} />Categories
             </button>
             <button
               id="nav-cart"
@@ -83,6 +85,8 @@ export default function App() {
             <Route path="/cart"                   element={<CartPage />} />
             <Route path="/checkout"               element={<CheckoutPage />} />
             <Route path="/tracking"               element={<TrackingPage />} />
+            <Route path="/shops"       element={<ShopsPage />} />
+            <Route path="/categories"  element={<CategoriesPage />} />
           </Route>
         </Routes>
       </UIProvider>

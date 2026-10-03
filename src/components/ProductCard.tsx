@@ -18,10 +18,10 @@ export function ProductCard({ product, onOpen, onAdded }: Props) {
     <article className="product-card">
       <button className="product-image" aria-label={`View ${product.name}`} onClick={() => onOpen(product)}>
         <img src={product.image} alt={product.name} loading="lazy" />
-        <span>10 MINS</span>
+        {discount >= 3 && <span>{discount}% OFF</span>}
       </button>
       <button className="product-name" onClick={() => onOpen(product)}>{product.name}</button>
-      <p className="weight">{product.weight} · <em>{discount}% off</em></p>
+      <p className="weight">{product.unit}</p>
       <div className="price-row"><b>₹{product.price}</b><del>₹{product.mrp}</del></div>
       {!product.inStock ? (
         <span className="sold-out">Out of stock</span>

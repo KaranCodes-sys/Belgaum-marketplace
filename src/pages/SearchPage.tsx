@@ -1,9 +1,7 @@
 import { useSearchParams } from 'react-router-dom'
 import { ProductGrid } from '../components/ProductGrid'
-import { getDisplayProducts } from '../services/catalog'
+import { searchDisplayProducts } from '../services/catalog'
 import { useUI } from '../context/UIContext'
-
-const allProducts = getDisplayProducts()
 
 const SUGGESTIONS = ['Milk', 'Fruits', 'Chips', 'Rice', 'Coffee']
 
@@ -12,23 +10,19 @@ export default function SearchPage() {
   const query                   = searchParams.get('q')?.trim() ?? ''
   const { openProduct, notify } = useUI()
 
-  const results = allProducts.filter((p) =>
-    `${p.name} ${p.categoryId} ${p.tags.join(' ')}`
-      .toLowerCase()
-      .includes(query.toLowerCase()),
-  )
+  const results = searchDisplayProducts(query)
 
   return (
     <section className="catalog search-page">
-      <h1>{query ? `Results for "${query}"` : 'Search our store'}</h1>
+      <h1>{query ? `Results for "${query}"` : 'Browse products'}</h1>
       {query ? (
         results.length ? (
           <ProductGrid items={results} onOpen={openProduct} onAdded={notify} />
         ) : (
           <div className="empty">
             <span>🔎</span>
-            <h2>No groceries found</h2>
-            <p>Try searching for fruit, milk, snacks or coffee.</p>
+            <h2>No products found</h2>
+            <p>Try a different search — fruit, milk, snacks, rice, coffee…</p>
           </div>
         )
       ) : (
