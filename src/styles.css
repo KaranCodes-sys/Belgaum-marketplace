@@ -529,8 +529,8 @@ img { display: block; }
   height: 60px;
   background: var(--white);
   border-top: 1px solid #e8ebe7;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   box-shadow: 0 -2px 16px rgba(0,0,0,.06);
 }
 .bottom-nav button {
@@ -542,7 +542,6 @@ img { display: block; }
   gap: 3px;
   align-items: center;
   justify-content: center;
-  width: 33.33%;
   transition: color .15s;
   position: relative;
   padding-top: 4px;
@@ -559,6 +558,7 @@ img { display: block; }
   background: var(--green-brand);
   border-radius: 0 0 3px 3px;
 }
+
 
 /* ════════════════════════════════════════════════════
    PAGE HEADING (back + title row)
@@ -1228,4 +1228,444 @@ img { display: block; }
 .checkout-card .total {
   font-size: 15px;
   font-weight: 800;
-}
+}
+
+/* ════════════════════════════════════════════════════
+   SHOPS PAGE — HEADER / SUBTITLE
+   ════════════════════════════════════════════════════ */
+
+.shops-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 4px;
+}
+
+.shops-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.shops-open-count {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--green-brand);
+  background: var(--green-light);
+  border: 1px solid var(--green-muted);
+  border-radius: var(--r-pill);
+  padding: 3px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════════════
+   SHOP TYPE FILTER CHIPS
+   ════════════════════════════════════════════════════ */
+.shops-filters {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.shops-filters::-webkit-scrollbar { display: none; }
+
+.shops-filter-chip {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--border-mid);
+  background: var(--white);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: background .15s, border-color .15s, color .15s, transform .1s;
+  cursor: pointer;
+}
+.shops-filter-chip.active {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--white);
+}
+.shops-filter-chip:hover:not(.active) {
+  background: var(--surface);
+  border-color: var(--border-mid);
+  transform: translateY(-1px);
+}
+.shops-filter-chip:active { transform: scale(.96); }
+
+/* ════════════════════════════════════════════════════
+   SHOPS LIST
+   ════════════════════════════════════════════════════ */
+.shops-list {
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ════════════════════════════════════════════════════
+   SHOP CARD (directory listing)
+   ════════════════════════════════════════════════════ */
+.shop-card {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 14px 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .18s, box-shadow .18s, transform .15s;
+  box-shadow: var(--shadow-card);
+}
+.shop-card:hover {
+  border-color: var(--green-brand);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+.shop-card:active { transform: scale(.98); }
+
+.shop-card-icon {
+  font-size: 32px;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border-radius: var(--r-md);
+}
+
+.shop-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.shop-card-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.shop-card-type {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.shop-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.shop-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11.5px;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+
+.shop-card-tagline {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.shop-card-arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--text-faint);
+  align-self: center;
+}
+
+/* ════════════════════════════════════════════════════
+   SHOP STATUS PILL
+   ════════════════════════════════════════════════════ */
+.shop-status-pill {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.shop-status-pill.open {
+  background: #e8faf0;
+  color: #1a7a3f;
+  border: 1px solid #b6f0cc;
+}
+.shop-status-pill.closed {
+  background: #fff2f0;
+  color: #a33030;
+  border: 1px solid #f5c6c6;
+}
+
+/* ════════════════════════════════════════════════════
+   SHOPS EMPTY STATE
+   ════════════════════════════════════════════════════ */
+.shops-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  font-size: 13.5px;
+  text-align: center;
+}
+.shops-empty span { font-size: 40px; }
+.shops-empty p { margin: 0; }
+
+.shop-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-brand);
+  cursor: pointer;
+  margin-top: 8px;
+}
+.shop-back-link:hover { text-decoration: underline; }
+
+/* ════════════════════════════════════════════════════
+   SHOP DETAIL — HERO
+   ════════════════════════════════════════════════════ */
+.shop-hero {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  background: var(--surface);
+  border-bottom: 1.5px solid var(--border);
+}
+
+.shop-hero-icon {
+  font-size: 44px;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.shop-hero-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-hero-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.shop-hero-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.shop-hero-tagline {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin: 2px 0 6px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.shop-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.shop-hero-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.shop-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 5px 10px;
+  min-width: 52px;
+}
+.shop-stat b {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.shop-stat small {
+  font-size: 10px;
+  color: var(--text-faint);
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+/* ════════════════════════════════════════════════════
+   SHOP DETAIL — CLOSED BANNER
+   ════════════════════════════════════════════════════ */
+.shop-closed-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 14px 16px 4px;
+  padding: 12px 14px;
+  background: #fff8f0;
+  border: 1.5px solid #f5d9b6;
+  border-radius: var(--r-md);
+  font-size: 13px;
+}
+.shop-closed-banner > span {
+  font-size: 22px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.shop-closed-banner b {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7a4a10;
+  margin-bottom: 2px;
+}
+.shop-closed-banner p {
+  margin: 0;
+  font-size: 12px;
+  color: #9a6830;
+  line-height: 1.4;
+}
+
+/* ════════════════════════════════════════════════════
+   SHOP DETAIL — PRODUCTS AREA
+   ════════════════════════════════════════════════════ */
+.shop-products-area {
+  padding: 0 0 16px;
+}
+
+.shop-products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 8px;
+}
+.shop-products-header h2 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-primary);
+}
+.shop-products-header span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* ════════════════════════════════════════════════════
+   SHOP DETAIL — CATEGORY SECTIONS
+   ════════════════════════════════════════════════════ */
+.shop-cat-section {
+  padding: 0 0 8px;
+}
+
+.shop-cat-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-mid);
+  margin: 0;
+  padding: 10px 16px 8px;
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.1px;
+}
+
+/* ════════════════════════════════════════════════════
+   HOME — SHOPS ENTRY POINT
+   ════════════════════════════════════════════════════ */
+.shops-entry {
+  padding: 4px 16px 20px;
+}
+
+.shops-entry-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #e8f9ef 100%);
+  border: 1.5px solid var(--green-muted);
+  border-radius: var(--r-lg);
+  padding: 14px 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .18s, box-shadow .18s, transform .15s;
+}
+.shops-entry-btn:hover {
+  border-color: var(--green-brand);
+  box-shadow: 0 4px 16px rgba(22,128,75,.12);
+  transform: translateY(-1px);
+}
+.shops-entry-btn:active { transform: scale(.98); }
+
+.shops-entry-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.shops-entry-btn > div {
+  flex: 1;
+  min-width: 0;
+}
+.shops-entry-btn b {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 2px;
+}
+.shops-entry-btn small {
+  font-size: 11.5px;
+  color: var(--green-mid);
+}
+.shops-entry-btn > span:last-child {
+  color: var(--green-brand);
+  flex-shrink: 0;
+}
+

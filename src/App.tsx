@@ -5,8 +5,9 @@ import { CartBar } from './components/CartBar'
 import { Toast } from './components/Toast'
 import { ProductModal } from './components/ProductModal'
 import { AddressPicker } from './components/AddressPicker'
-import { Home, PackageCheck, Grid } from './components/icons'
+import { Home, PackageCheck, Grid, Store } from './components/icons'
 import { UIProvider, useUI } from './context/UIContext'
+import { ShopProvider } from './context/ShopContext'
 import HomePage from './pages/HomePage'
 import CategoryPage from './pages/CategoryPage'
 import SearchPage from './pages/SearchPage'
@@ -14,6 +15,7 @@ import CartPage from './pages/CartPage'
 import CheckoutPage from './pages/CheckoutPage'
 import TrackingPage from './pages/TrackingPage'
 import ShopsPage from './pages/ShopsPage'
+import ShopDetailPage from './pages/ShopDetailPage'
 import CategoriesPage from './pages/CategoriesPage'
 
 // ── Layout ────────────────────────────────────────────────────────────────
@@ -26,6 +28,9 @@ function Layout() {
     const { selectedProduct, closeProduct, toast, notify } = useUI()
     const isTracking = location.pathname === '/tracking'
     const path = location.pathname
+
+    // Shops experience: /shops and /shop/:id
+    const isShopMode = path === '/shops' || path.startsWith('/shop/')
 
     return (
         <main className="app-shell">
@@ -49,6 +54,13 @@ function Layout() {
                             onClick={() => navigate('/categories')}
                         >
                             <Grid size={20} />Categories
+                        </button>
+                        <button
+                            id="nav-shops"
+                            className={isShopMode ? 'active' : ''}
+                            onClick={() => navigate('/shops')}
+                        >
+                            <Store size={20} />Shops
                         </button>
                         <button
                             id="nav-cart"
@@ -78,18 +90,21 @@ export default function App() {
     return (
         <BrowserRouter>
             <UIProvider>
-                <Routes>
-                    <Route element={<Layout />}>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/category/:categoryId" element={<CategoryPage />} />
-                        <Route path="/search" element={<SearchPage />} />
-                        <Route path="/cart" element={<CartPage />} />
-                        <Route path="/checkout" element={<CheckoutPage />} />
-                        <Route path="/tracking" element={<TrackingPage />} />
-                        <Route path="/shops" element={<ShopsPage />} />
-                        <Route path="/categories" element={<CategoriesPage />} />
-                    </Route>
-                </Routes>
+                <ShopProvider>
+                    <Routes>
+                        <Route element={<Layout />}>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/category/:categoryId" element={<CategoryPage />} />
+                            <Route path="/search" element={<SearchPage />} />
+                            <Route path="/cart" element={<CartPage />} />
+                            <Route path="/checkout" element={<CheckoutPage />} />
+                            <Route path="/tracking" element={<TrackingPage />} />
+                            <Route path="/shops" element={<ShopsPage />} />
+                            <Route path="/shop/:shopId" element={<ShopDetailPage />} />
+                            <Route path="/categories" element={<CategoriesPage />} />
+                        </Route>
+                    </Routes>
+                </ShopProvider>
             </UIProvider>
         </BrowserRouter>
     )

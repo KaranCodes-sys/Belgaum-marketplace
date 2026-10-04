@@ -163,15 +163,62 @@ export function searchDisplayProducts(query: string): DisplayProduct[] {
 }
 
 /**
+ * Converts a MasterProduct to a DisplayProduct using a SPECIFIC shop's
+ * inventory record. This is used in Shop Mode so the customer sees the
+ * exact price from THAT shop (passed through pricing.ts), not the cheapest
+ * cross-shop price.
+ *
+ * IMPORTANT: This must NOT fall back to another shop's price.
+ */
+function buildDisplayProductForShop(
+  product: MasterProduct,
+  inv: ShopInventory,
+): DisplayProduct {
+  return {
+    id:          product.id,
+    categoryId:  product.categoryId,
+    name:        product.name,
+    description: product.description,
+    image:       product.image,
+    unit:        product.unit,
+    variants:    product.variants,
+    tags:        product.tags,
+    price:       calculateCustomerPrice(inv.price), // this shop's price → customer price
+    mrp:         product.mrp,
+    inStock:     inv.inStock,
+  }
+}
+
+/**
  * All inventory entries for a specific shop, enriched with master product
- * data. Used for the Nearby Shops experience (Phase 2+).
+ * data, priced using THAT shop's inventory record only.
+ *
+ * Used for the Shop Detail page (Phase 4).
  * Returns only products where the shop has an inventory record.
+ * Preserves the shop's own inStock status.
  */
 export function getDisplayProductsForShop(shopId: string): DisplayProduct[] {
   const shopInventory = getInventoryForShop(shopId)
   return _master.flatMap((product) => {
     const inv = shopInventory.find((i) => i.productId === product.id)
     if (!inv) return []
-    return [buildDisplayProduct(product)]
+    return [buildDisplayProductForShop(product, inv)]
   })
+}
+
+/**
+ * Returns a single DisplayProduct for a specific shop + product pair.
+ * Used when entering product detail from shop context to ensure
+ * the price/availability reflects THAT shop only.
+ * Returns undefined if the shop has no inventory record for this product.
+ */
+export function getDisplayProductForShop(
+  productId: string,
+  shopId: string,
+): DisplayProduct | undefined {
+  const product = getProductById(productId)
+  if (!product) return undefined
+  const inv = getInventoryForShop(shopId).find((i) => i.productId === productId)
+  if (!inv) return undefined
+  return buildDisplayProductForShop(product, inv)
 }

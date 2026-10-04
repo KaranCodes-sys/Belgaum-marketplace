@@ -34,3 +34,7 @@ export const Truck = icon('🚚')
 export const Trash2 = icon('🗑')
 export const Check = icon('✓')
 export const X = icon('✕')
+export const Store = icon('🏪')
+export const Star = icon('⭐')
+export const Clock = icon('⏱')
+
